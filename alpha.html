@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .letter {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alphabet Portal</h1>
+    <div class="container">
+        <div class="letter" onclick="speak('A for Apple')"><h2>A</h2><img src="https://img.freepik.com/premium-vector/alphabet-flashcard-with-letter-apple_543090-296.jpg" alt="Apple"></div>
+        <div class="letter" onclick="speak('B for Ball')"><h2>B</h2><img src="https://www.supercoloring.com/sites/default/files/styles/drawing_full/public/fif/2021/11/classroom-alphabets-03-paper-crafts.jpg" alt="Ball"></div>
+        <div class="letter" onclick="speak('C for Cat')"><h2>C</h2><img src="https://img.freepik.com/premium-vector/alphabet-flashcard-with-letter-c-cat_543090-319.jpg" alt="Cat"></div>
+        <div class="letter" onclick="speak('D for Dog')"><h2>D</h2><img src="https://i.pinimg.com/736x/31/ae/bd/31aebdd72febb60a89ac5d560b1f22dc.jpg" alt="Dog"></div>
+        <div class="letter" onclick="speak('E for Egg')"><h2>E</h2><img src="https://i.pinimg.com/736x/36/78/42/367842c18b9c37e0d64afe4284291b0c.jpg" alt="Egg"></div>
+        <div class="letter" onclick="speak('F for Fish')"><h2>F</h2><img src="https://c8.alamy.com/comp/2PN6DGT/alphabet-flashcard-for-children-with-the-letter-f-from-fish-2PN6DGT.jpg" alt="Fish"></div>
+        <div class="letter" onclick="speak('G for Giraffe')"><h2>G</h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd-cYN4LqkGc4KkKmR_jxSnkedunpQ81UafQ&s" alt="Giraffe"></div>
+        <div class="letter" onclick="speak('H for Hat')"><h2>H</h2><img src="https://i.pinimg.com/736x/87/0b/55/870b556cf59b7e2ae207caa48662cf87.jpg" alt="Hat"></div>
+        <div class="letter" onclick="speak('I for Ice Cream')"><h2>I</h2><img src="https://c8.alamy.com/comp/2EBANJC/abc-food-education-flash-card-letter-i-icecream-cartoon-design-template-with-colorful-alphabet-education-card-2EBANJC.jpg" alt="Ice Cream"></div>
+        <div class="letter" onclick="speak('J for Jam')"><h2>J</h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmKrUDPnt4h7eul6-LkGNNoI8UX8Jc72Cqyg&s" alt="Jam"></div>
+        <div class="letter" onclick="speak('K for Key')"><h2>K</h2><img src="https://img.freepik.com/premium-vector/key-vector-isolated-white-background-letter-k-flashcard-key-cartoon_648083-11.jpg" alt="Key"></div>
+        <div class="letter" onclick="speak('L for Lamp')"><h2>L</h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBi1bmbjYG47ThMMUiE1nZgluHNV5vey93zg&s" alt="Lamp"></div>
+        <div class="letter" onclick="speak('M for Monkey')"><h2>M</h2><img src="https://i.pinimg.com/736x/8e/5c/36/8e5c361e15c3a522cf34a687dfd68689.jpg" alt="Monkey"></div>
+        <div class="letter" onclick="speak('N for Net')"><h2>N</h2><img src="https://i.pinimg.com/474x/89/c2/1d/89c21d9b1fc9c922a04b86752555203f.jpg" alt="Net"></div>
+        <div class="letter" onclick="speak('O for Orange')"><h2>O</h2><img src="https://img.freepik.com/premium-vector/orange-vector-isolated-white-background-letter-o-flashcard-orange-cartoon_648083-15.jpg" alt="Orange"></div>
+        <div class="letter" onclick="speak('P for Penguin')"><h2>P</h2><img src="https://img.freepik.com/premium-vector/alphabet-flashcard-with-letter-p-penguin_543090-316.jpg" alt="Penguin"></div>
+        <div class="letter" onclick="speak('Q for Quilt')"><h2>Q</h2><img src="https://img.freepik.com/premium-vector/quilt-vector-isolated-white-background-letter-q-flashcard-quilt-cartoon_648083-17.jpg" alt="Quilt"></div>
+        <div class="letter" onclick="speak('R for Rainbow')"><h2>R</h2><img src="https://img.freepik.com/premium-vector/alphabet-flashcard-with-letter-r-rainbow_543090-318.jpg" alt="Rainbow"></div>
+        <div class="letter" onclick="speak('S for Sun')"><h2>S</h2><img src="https://i.pinimg.com/1200x/89/c0/62/89c062ec39134b2029b030f46c8575a7.jpg" alt="Sun"></div>
+        <div class="letter" onclick="speak('T for Tiger')"><h2>T</h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzH1tz86q3cYrM4fInSD6qHtmkDnNqRv5UuA&s" alt="Tiger"></div>
+        <div class="letter" onclick="speak('U for Umbrella')"><h2>U</h2><img src="https://i.pinimg.com/474x/82/81/71/828171f54e81e6c87920b0c406476f35.jpg" alt="Umbrella"></div>
+        <div class="letter" onclick="speak('V for Vase')"><h2>V</h2><img src="https://i.pinimg.com/736x/1f/bf/ec/1fbfec25a4610de634402db8afbb880e.jpg" alt="Vase"></div>
+        <div class="letter" onclick="speak('W for Watermelon')"><h2>W</h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYiZdImvH4dpzeNSAKsoh2k_daQdgymHDrEg&s" alt="Watermelon"></div>
+        <div class="letter" onclick="speak('X for X-ray')"><h2>X</h2><img src="https://i.pinimg.com/736x/77/30/6c/77306c806f9d639cea2fe593521d40e1.jpg" alt="X-ray"></div>
+        <div class="letter" onclick="speak('Y for Yoyo')"><h2>Y</h2><img src="https://i.pinimg.com/1200x/85/d1/09/85d109e4944edfae34c25406f63d6c42.jpg" alt="Yoyo"></div>
+        <div class="letter" onclick="speak('Z for Zebra')"><h2>Z</h2><img src="https://i.pinimg.com/736x/91/7a/8a/917a8a6e5dc01135600acd223f2277b0.jpg" alt="Zebra"></div>
+    </div>
+
+    <script>
+        function speak(text) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>

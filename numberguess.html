@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; background-color: #f0f8ff;">
+    <h1>Interactive Number Guessing Game</h1>
+    <p>Try to guess the number between <strong>1</strong> and <strong>100</strong>.</p>
+    
+    <div id="game-container" style="margin: 20px auto; max-width: 300px; background: #e6e6fa; padding: 20px; border-radius: 10px;">
+        <p id="feedback" style="font-size: 1.2em; margin-bottom: 15px;">Start guessing...</p>
+        <input type="number" id="guess" placeholder="Enter your guess" min="1" max="100" style="width: 80%; padding: 10px;">
+        <button id="submit-guess" style="padding: 10px 20px; margin-top: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">Submit</button>
+        <button id="restart-game" style="padding: 10px 20px; margin-top: 10px; background-color: #ff4500; color: white; border: none; cursor: pointer; display: none;">Restart Game</button>
+    </div>
+
+    <script src="numberguess.js"></script>
+    <a href="quiz.html" class="button">Go to Quiz Game</a>
+    <a href="word.html" class="button">Go to Word Match  Game</a>
+    <a href="card.html" class="button">Go to Card Match Game</a>
+    <a href="index.html" class="button">HOME</a>
+</body>
+</html>

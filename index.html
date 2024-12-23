@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Portal with Voice Assistant</title>
+    <style>
+        /* Basic styling for the educational portal */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffcccb;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header h1 {
+            text-align: center;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .module {
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            width: 80%; /* Adjust width for responsive layout */
+            max-width: 600px;
+            margin: 15px 0;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .module:hover {
+            transform: scale(1.05);
+        }
+
+        .module img {
+            width: 200px;
+            height: 150px;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .math-module {
+            background-color: #e8f4fc;
+            border: 2px solid #a2d2ff;
+            border-radius: 10px;
+            width: 250px;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        .game-module {
+            background-color: #e8f4fc;
+            border: 2px solid #a2d2ff;
+            border-radius: 10px;
+            width: 250px;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Voice Assistant Styles */
+        #startButton {
+            position: fixed;
+            bottom: 20px; /* Adjust this value for vertical positioning */
+            right: 20px; /* Fixed at the right side */
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #startButton:hover {
+            background-color: #45a049;
+        }
+
+        #output {
+            margin-top: 20px;
+        }
+
+        .game-container, .math-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .game-module, .math-module {
+            background-color: #e8f4fc;
+            border: 2px solid #a2d2ff;
+            border-radius: 10px;
+            width: 250px;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Special Educational Portal </h1>
+        <marquee style="color: red; font-size: 15px;">This portal aims to provide accessible educational content for specially abled children.Special education is a type of instruction that helps students with disabilities learn the same skills as other students in school. It's based on the idea that all people have the right to learn and succeed, regardless of their disabilities. Special education is a type of formal education that helps people with learning difficulties, disabilities, or other challenges reach their full potential. Special education can help students with physical, cognitive, emotional, and behavioral challenges. The goal of special education is to provide students with the support and accommodations they need to lead fulfilling lives.</marquee>
+        </body>
+        </html>
+        
+    </header>
+
+    <div class="container">
+        <!-- Math Module -->
+        <div class="module" id="math-module">
+            <h2>Math with Ice Cream</h2>
+            <img src="https://i.ytimg.com/vi/dXLnVW93ozU/maxresdefault.jpg" alt="Ice Cream" width="500" height="500">
+            <p>Learn addition, subtraction, multiplication, and division with fun ice cream images!</p>
+            <button onclick="toggleMathModules()">Explore Math Modules</button>
+
+            <div class="math-container" id="math-container" style="display: none;">
+                <div class="math-module" id="addition">
+                    <h3>Addition</h3>
+                    <p>Learn and practice addition.</p>
+                    <button onclick="location.href='addition.html'">Start Addition</button>
+                </div>
+
+                <div class="math-module" id="subtraction">
+                    <h3>Subtraction</h3>
+                    <p>Learn and practice subtraction.</p>
+                    <button onclick="location.href='sub.html'">Start Subtraction</button>
+                </div>
+
+                <div class="math-module" id="multiplication">
+                    <h3>Multiplication</h3>
+                    <p>Learn and practice multiplication.</p>
+                    <button onclick="location.href='mul.html'">Start Multiplication</button>
+                </div>
+
+                <div class="math-module" id="division">
+                    <h3>Division</h3>
+                    <p>Learn and practice division.</p>
+                    <button onclick="location.href='division.html'">Start Division</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rhymes Module -->
+        <div class="module" id="rhymes-module">
+            <h2>Rhymes and Songs</h2>
+            <img src="https://offshootbooks.com/cdn/shop/products/51tkYqDeMNL._SY498_BO1_204_203_200_large.jpg?v=1654680925" alt="Rhymes" width="100" height="100">
+            <p>Enjoy learning alphabets and numbers through engaging rhymes!</p>
+            <button onclick="location.href='rhymes.html'">Sing Along</button>
+        </div>
+
+        <!-- Game Module -->
+        <div class="module" id="game-module">
+            <h2>Interactive Fun Games</h2>
+            <img src="https://www.cubelelo.com/cdn/shop/articles/mind_games1_1200x.webp?v=1714472954" alt="Games" width="200" height="150">
+            <p>Play games that make learning fun and interactive.</p>
+            <button onclick="toggleGameModules()">Explore Games</button>
+
+            <div class="game-container" id="game-container" style="display: none;">
+                <div class="game-module">
+                    <h3>Number Guessing</h3>
+                    <p>Guess a random number and test your luck!</p>
+                    <button onclick="location.href='numberguess.html'">Start Game</button>
+                </div>
+
+                <div class="game-module">
+                    <h3>Card Match</h3>
+                    <p>Find matching cards and sharpen your memory.</p>
+                    <button onclick="location.href='card.html'">Start Game</button>
+                </div>
+
+                <div class="game-module">
+                    <h3>Quiz Challenge</h3>
+                    <p>Answer fun questions and see how much you know.</p>
+                    <button onclick="location.href='quiz.html'">Start Game</button>
+                </div>
+
+                <div class="game-module">
+                    <h3>Word Puzzle</h3>
+                    <p>Solve the word puzzles to improve your vocabulary.</p>
+                    <button onclick="location.href='word.html'">Start Game</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alphabets Module -->
+        <div class="module" id="Alphabets">
+            <h2>Alphabets</h2>
+            <img src="https://motherspet.com/blogs/wp-content/uploads/2024/07/letters-in-alphabet.jpg" alt="Alphabets">
+            <p>Learn Alphabets.</p>
+            <button onclick="location.href='alpha.html'">Click & Learn</button>
+        </div>
+    </div>
+
+    <!-- Voice Assistant -->
+    <button id="startButton">Start Listening</button>
+    <div id="output"></div>
+
+    <script>
+        let speechSynthesisActive = false;
+        function toggleMathModules() {
+            const mathContainer = document.getElementById('math-container');
+            mathContainer.style.display = (mathContainer.style.display === 'none') ? 'flex' : 'none';
+        }
+
+        // Toggle Game Modules visibility
+        function toggleGameModules() {
+            const gameContainer = document.getElementById('game-container');
+            gameContainer.style.display = (gameContainer.style.display === 'none' || gameContainer.style.display === '') ? 'flex' : 'none';
+        }
+
+        // Initialize Speech Synthesis and Recognition
+        const synth = window.speechSynthesis;
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        const recognition = new SpeechRecognition();
+        recognition.lang = 'en-US';
+        recognition.interimResults = false;
+        recognition.continuous = false;
+        
+        let isSpeaking = false;
+
+        function speak(text) {
+            if (synth.speaking || isSpeaking) {
+                console.warn('Speech is already in progress.');
+                return;
+            }
+            isSpeaking = true;
+            const utterThis = new SpeechSynthesisUtterance(text);
+            synth.speak(utterThis);
+            utterThis.onend = () => {
+                isSpeaking = false;
+            };
+        }
+
+        function handleCommand(command) {
+            console.log(`Received command: ${command}`);
+            command = command.toLowerCase();
+
+            if (command.includes('hello') || command.includes('start listening')) {
+                speak('I am now listening for commands. Please say Math, Rhymes, Games, or Alphabets.');
+                return;
+            }
+
+            if (command.includes('math')) {
+                document.getElementById('math-module').scrollIntoView({ behavior: 'smooth' });
+                speak('Navigating to Math Module.');
+                if (command.includes('addition')) {
+                    document.getElementById('addition').scrollIntoView({ behavior: 'smooth' });
+                    speak('Opening Addition Module.');
+                    window.open("addition.html");
+                } else if (command.includes('subtraction')) {
+                    document.getElementById('subtraction').scrollIntoView({ behavior: 'smooth' });
+                    speak('Opening Subtraction Module.');
+                    window.open('sub.html');
+                } else if (command.includes('multiplication')) {
+                    document.getElementById('multiplication').scrollIntoView({ behavior: 'smooth' });
+                    speak('Opening Multiplication Module.');
+                    window.open('mul.html');
+                } else if (command.includes('division')) {
+                    document.getElementById('division').scrollIntoView({ behavior: 'smooth' });
+                    speak('Opening Division Module.');
+                    window.open('division.html');
+                }
+            } else if (command.includes('rhymes')) {
+                document.getElementById('rhymes-module').scrollIntoView({ behavior: 'smooth' });
+                speak('Navigating to Rhymes Module.');
+            } else if (command.includes('game')) {
+                document.getElementById('game-module').scrollIntoView({ behavior: 'smooth' });
+                speak('Navigating to Games Module.');
+            } else if (command.includes('alphabet')) {
+                document.getElementById('Alphabets').scrollIntoView({ behavior: 'smooth' });
+                speak('Navigating to Alphabets Module.');
+            } else {
+                speak('Sorry, I did not understand that command. Please say Math, Rhymes, Games, or Alphabets.');
+            }
+        }
+
+        recognition.onstart = function() {
+            document.getElementById('output').textContent = 'Listening...';
+        };
+
+        recognition.onresult = function(event) {
+            const command = event.results[0][0].transcript.trim();
+            document.getElementById('output').textContent = `You said: ${command}`;
+            handleCommand(command);
+        };
+
+        recognition.onerror = function(event) {
+            console.error('Speech recognition error:', event);
+            speak('Sorry, I could not hear you. Please try again.');
+        };
+
+        function startListening() {
+            recognition.start();
+            speak('I am listening');
+        }
+
+        document.getElementById('startButton').addEventListener('click', function() {
+            startListening();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            speak('Welcome to the Educational Portal for Specially Abled Children. This portal consists of learning modules. Click to start Math with Ice Cream, Rhymes, Games, or Alphabets. Say "start listening" to give voice commands.');
+        
+        });
+    </script>
+</body>
+</html>
